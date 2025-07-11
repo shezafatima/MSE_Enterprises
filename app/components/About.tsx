@@ -8,7 +8,7 @@ const About = () => {
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h2 className="my-2">Who We Are</h2>
             <span className="bg-orange-600 w-10 h-[3px] my-2"></span>
-            <h1 className="title-font sm:text-5xl sm:font-medium text-3xl mb-4  drop-shadow-lg text-orange-600 mt-2">
+            <h1 className="title-font sm:font-medium text-4xl mb-4  drop-shadow-lg text-orange-600 mt-2">
               About Us
             </h1>
             <p className="mb-8 leading-relaxed text-gray-500 text-[18px]">

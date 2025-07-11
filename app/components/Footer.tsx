@@ -1,107 +1,99 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import { Locate, Mail, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-          <Logo />
-          <p className="mt-2 text-sm text-white">
-            M.S.E Enterprises is one of the largest and most progressive
-            organization in Polyethylene manufacturing of polythene bags its
-            monthly production capacity of over 300 m/tons per month.
-          </p>
+     <div className="container px-5 py-16 mx-auto flex flex-col md:flex-row md:items-start">
+  {/* Left Logo Section */}
+  <div className="md:w-1/3 w-full text-center md:text-left mb-10 md:mb-0">
+    <Logo />
+    <p className="mt-2 text-sm text-white md:w-5/6">
+      M.S.E Enterprises is one of the largest and most progressive
+      organization in Polyethylene manufacturing of polythene bags its
+      monthly production capacity of over 300 m/tons per month.
+    </p>
+  </div>
+
+  {/* Link Columns */}
+  <div className="md:w-2/3 w-full flex flex-wrap">
+    {/* Quick Links */}
+    <div className="w-full md:w-1/3 px-4 mb-10 md:mb-0 md:mt-7">
+      <h2 className="text-orange-600 font-medium tracking-widest text-[20px] ">Quick Links</h2>
+      <span className="block bg-orange-600 w-10 h-[3px] my-2"></span>
+      <nav className="list-none">
+        <li><Link href="" className="text-white text-[14px] hover:text-orange-600">Products</Link></li>
+        <li><Link href="" className="text-white text-[14px] hover:text-orange-600">About Us</Link></li>
+        <li><Link href="" className="text-white text-[14px] hover:text-orange-600">Our Certifications</Link></li>
+        <li><Link href="" className="text-white text-[14px] hover:text-orange-600">Contact Us</Link></li>
+      </nav>
+    </div>
+
+    {/* Our Products */}
+    <div className="w-full md:w-1/3 px-4 mb-10 md:mb-0 md:mt-7">
+      <h2 className="text-orange-600 font-medium tracking-widest text-[20px] ">Our Products</h2>
+       <span className="block bg-orange-600 w-10 h-[3px] my-2"></span>
+      <nav className="list-none">
+        <li><Link href="" className="text-white text-[14px] hover:text-orange-600">First Link</Link></li>
+        <li><Link href="" className="text-white text-[14px] hover:text-orange-600">Second Link</Link></li>
+        <li><Link href="" className="text-white text-[14px] hover:text-orange-600">Third Link</Link></li>
+        <li><Link href="" className="text-white text-[14px] hover:text-orange-600">Fourth Link</Link></li>
+      </nav>
+    </div>
+
+    {/* Get in Touch */}
+    <div className="w-full md:w-1/3 px-4 md:mt-7">
+      <h2 className="text-orange-600 font-medium tracking-widest text-[20px]">Get in Touch</h2>
+       <span className="block bg-orange-600 w-10 h-[3px] my-2"></span>
+      <nav className="list-none">
+        <div className="flex items-center gap-2 my-4">
+          <span className="bg-orange-600 p-2 rounded-sm inline-flex">
+            <Phone className=" text-white" />
+          </span>
+          <ul><Link href="" className="text-white hover:text-orange-600 text-sm">Contact Us</Link>
+          <li className="text-sm">
+            +92-330-3512225
+          </li>
+           <li className="text-sm">
+            +92-321-2424299
+          </li>
+          </ul>
         </div>
-        <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font  text-orange-600 font-medium tracking-widest text-[20px] mb-3">
-              Quick Links
-            </h2>
-            <nav className="list-none mb-10">
-              <li>
-                <Link href="" className="text-white text-[14px] hover:text-orange-600">Products</Link>
-              </li>
-              <li>
-                <Link href="" className="text-white text-[14px] hover:text-orange-600">About Us</Link>
-              </li>
-              <li>
-                <Link href="" className="text-white text-[14px] hover:text-orange-600">Our Certifications </Link>
-              </li>
-              <li>
-                <Link href="" className="text-white text-[14px] hover:text-orange-600">Contact Us</Link>
-              </li>
-            </nav>
-          </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-             <h2 className="title-font  text-orange-600 font-medium tracking-widest text-[20px] mb-3">
-             Our Products
-            </h2>
-            <nav className="list-none mb-10">
-              <li>
-                <Link href="" className="text-gray-600 hover:text-gray-800">First Link</Link>
-              </li>
-              <li>
-                <Link href="" className="text-gray-600 hover:text-gray-800">Second Link</Link>
-              </li>
-              <li>
-                <Link href="" className="text-gray-600 hover:text-gray-800">Third Link</Link>
-              </li>
-              <li>
-                <Link href="" className="text-gray-600 hover:text-gray-800">Fourth Link</Link>
-              </li>
-            </nav>
-          </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-             <h2 className="title-font  text-orange-600 font-medium tracking-widest text-[20px] mb-3">
-              Get in Touch
-            </h2>
-            <nav className="list-none mb-10">
-              <div className="flex items-center gap-2 my-4">
-<span className="bg-orange-600 p-2 rounded-sm inline-flex">
-  <Phone className="text-lg text-white" />
-</span>
-              <li>
-                <Link href={""} className="text-white hover:text-orange-600">Contact Us</Link>
-              </li>
-              </div>
-              <div className="flex items-center gap-2 my-4">
-<span className="bg-orange-600 p-2 rounded-sm inline-flex">
-  <Locate className="text-lg text-white" />
-</span>
-              <li>
-                <Link href={""} className="text-white hover:text-orange-600">Location</Link>
-              </li>
-              </div>
-              <div className="flex items-center gap-2 my-4">
-<span className="bg-orange-600 p-2 rounded-sm inline-flex">
-  <Mail className="text-lg text-white" />
-</span>
-              <li>
-                <Link href={""} className="text-white hover:text-orange-600">Mail Us</Link>
-              </li>
-              </div>
-              
-            </nav>
-          </div>
+        <div className="flex items-center gap-2 my-4">
+          <span className="bg-orange-600 p-2 rounded-sm inline-flex ">
+            <MapPin className="text-lg text-white " />
+          </span>
+          <ul><Link href="" className="text-white hover:text-orange-600 text-sm  ">Location</Link>
+          <li className="text-sm">
+            Karachi Unit 1:4-A, 2/3, Commercial Area, Nazimabad # 4, Karachi Pakistan
+          </li>
+          </ul>
         </div>
-      </div>
+        <div className="flex items-center gap-2 my-4">
+          <span className="bg-orange-600 p-2 rounded-sm inline-flex">
+            <Mail className="text-lg text-white" />
+          </span>
+          <ul><Link href="" className="text-white hover:text-orange-600 text-sm">Mail Us</Link>
+          <li className="text-sm">
+            mse_enterprises@gmail.com
+          </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+<hr className="w-full bg-orange-700 h-[2px]  border-none">
+
+</hr>
       <div className="bg-black">
-        <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-gray-500 text-sm text-center sm:text-left">
-            © {new Date().getFullYear()} M.S.E Enterprises —
-            <Link
-            href=""
-            
-              rel="noopener noreferrer"
-              className="text-gray-600 ml-1"
-              target="_blank"
-            >
-              mse_enterprises@gmail.com
-            </Link>
+        <div className=" mx-auto py-4  ">
+          <p className="text-gray-500 text-sm text-center ">
+           Copy Right © {new Date().getFullYear()} M.S.E Enterprises 
+           
           </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          {/* <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <Link
             href="" className="text-gray-500">
               <svg
@@ -159,7 +151,7 @@ export default function Footer() {
                 <circle cx={4} cy={4} r={2} stroke="none" />
               </svg>
             </a>
-          </span>
+          </span> */}
         </div>
       </div>
     </footer>

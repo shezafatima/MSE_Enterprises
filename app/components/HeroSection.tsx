@@ -66,7 +66,7 @@ export default function HeroSection() {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="mt-8"
         >
-          <div className="flex flex-row flex-wrap justify-center items-center relative">
+          <div className="flex flex-row  justify-center items-center relative">
 
           <button className="w-34 mr-3 inline-flex items-center justify-center border-2 border-orange-600 py-1 px-3  text-white font-bold text-base mt-4 md:mt-0 
   transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-orange-600
@@ -75,7 +75,7 @@ export default function HeroSection() {
     Our Products
   </Link>
 </button>
-<span className="absolute bg-orange-600 text-white rounded-full p-3 text-sm text-center shadow-[0_0_10px_4px_grey] z-10">
+<span className="absolute bg-orange-600 md:mt-0 mt-4 text-white rounded-full p-3 text-sm text-center shadow-[0_0_10px_4px_grey] z-10">
   OR
 </span>
 

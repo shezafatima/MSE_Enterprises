@@ -9,7 +9,7 @@ import MobileMenu from "./MobileMenu";
 export default function Navbar() {
   return (
     <header className="">
-      <div className="container mx-auto flex flex-wrap p-5 flex-row justify-between  items-center">
+      <div className="container mx-auto flex flex-wrap md:p-5 p-3 flex-row justify-between  items-center">
         <Logo />
 
         <nav className="hidden md:ml-auto md:mr-auto md:flex flex-wrap items-center text-base gap-12 justify-center">

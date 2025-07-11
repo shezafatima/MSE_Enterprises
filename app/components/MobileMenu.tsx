@@ -122,7 +122,8 @@ export default function MobileMenu() {
 
           <Link
             target="_blank"
-            href="/MSE_Enterprises.pdf"
+            href={"/mse_profile.pdf"}
+            download
             onClick={() => setOpen(false)}
             className="mt-4 border-2 border-orange-600 text-center py-2 rounded-full hover:bg-orange-600 hover:text-black font-bold"
           >
