@@ -7,10 +7,11 @@ export default function Logo() {
       <Image
         src="/images/MSE_logo.png"
         alt="MSE Enterprises Logo"
-        className="md:w-20 md:h-16 w-14 h-10"
+        className="w-24 "
         width={400}
         height={400}
       />
+       <p className="text-[9px] text-orange-600 font-bold -ml-3 mt-3">PLASTIC INDUSTRIES</p>
     </Link>
   );
 }

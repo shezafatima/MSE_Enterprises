@@ -39,7 +39,8 @@ export default function NavLinks() {
         onMouseEnter={() => setHovered("about")}
         onMouseLeave={() => setHovered(null)}
       >
-        <button
+        <Link
+        href={"/about"}
           className={clsx(
             "group relative flex items-center text-orange-600 transition-colors duration-300 pb-1",
             isActive("/about") && "font-semibold"
@@ -53,7 +54,7 @@ export default function NavLinks() {
               hovered === "about" || isActive("/about") ? "w-full" : "w-0 group-hover:w-full"
             )}
           />
-        </button>
+        </Link>
         <div
           className={clsx(
             "absolute top-full left-0 mt-2 w-52 rounded-md shadow-xl border border-orange-600 bg-black text-sm transition-all duration-300 z-10",
@@ -61,17 +62,17 @@ export default function NavLinks() {
           )}
         >
           {[
-            "Our Vision & Mission",
-            "Our Journey",
+            "Quality Policy",
             "Industries We Serve",
-            "Sustainability",
-            "Our Customers",
+            "Our Vision & Mission",
             "Our Certifications",
+            
             "Client Feedback",
+            "Our Customers",
           ].map((item, idx) => (
             <Link
               key={idx}
-              href={`/about/${item.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/about#${item.toLowerCase().replace(/\s+/g, "-")}`}
               className="block px-4 py-2 text-orange-600 hover:font-semibold transition-all"
             >
               {item}
@@ -86,7 +87,8 @@ export default function NavLinks() {
         onMouseEnter={() => setHovered("products")}
         onMouseLeave={() => setHovered(null)}
       >
-        <button
+        <Link
+        href={"/products"}
           className={clsx(
             "group relative flex items-center text-orange-600 transition-colors duration-300 pb-1",
             isActive("/products") && "font-semibold"
@@ -103,7 +105,7 @@ export default function NavLinks() {
               hovered === "products" || isActive("/products") ? "w-full" : "w-0 group-hover:w-full"
             )}
           />
-        </button>
+        </Link>
         <div
           className={clsx(
             "absolute top-full  mt-2 w-[220px] rounded-md shadow-xl border border-orange-600 bg-black text-sm transition-all duration-300 z-10",

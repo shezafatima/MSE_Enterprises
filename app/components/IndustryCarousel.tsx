@@ -9,13 +9,13 @@ const industries = [
     { name: "Bread & Bun", iconName: "bread-slice" },
   { name: "Chemical", iconName: "flask" },
     { name: "Food", iconName: "salad" },
-      { name: "Personal Care", iconName: "soap" },
+      { name: "Household", iconName: "soap" },
         { name: "Beverages", iconName: "coffee" },
           { name: "Automotive", iconName: "settings" },
             { name: "Pharmaceuticals", iconName: "capsules" },
   { name: "Engineering", iconName: "tools" },
   { name: "Edible Oil", iconName: "oil" },
-//   { name: "Textile", iconName: "" },
+  { name: "Textile", iconName: "reel" },
   { name: "Spices", iconName: "salt-pepper" },
 ]
 

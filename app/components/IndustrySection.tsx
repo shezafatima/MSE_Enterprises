@@ -2,7 +2,7 @@ import IndustryCarousel from "./IndustryCarousel"
 
 export default function IndustriesSection() {
   return (
-    <section className="bg-orange-500 py-16 px-4">
+    <section className="bg-orange-500 py-16 px-4" id="industries-we-serve">
       <div className="text-center mb-12">
         <h2 className="text-black  text-4xl font-bold">
           Industries <span className="font-light">We Serve</span>

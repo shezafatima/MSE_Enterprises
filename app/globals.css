@@ -105,6 +105,19 @@ html {
   color: transparent;
   -webkit-text-stroke: 1.2px #000000; /* Tailwind's orange-500 */
 }
+@layer utilities {
+  input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: black !important;
+    background-color: #ee6a0c !important;
+    box-shadow: 0 0 0px 1000px #f97316 inset !important; /* optional: orange fill */
+  }
+
+  input:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px #f97316 inset !important;
+  }
+}
+
 
 @layer base {
   * {

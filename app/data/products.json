@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "slug": "hdpe-ldpe-bags",
+    "title": "HDPE / LDPE Bags",
+    "image": "/images/ldpe-bags.jpg",
+    "shortDescription": "Durable polyethylene bags for general and industrial use.",
+    "fullDescription": "HDPE and LDPE bags are widely used for packaging in both retail and industrial environments. These bags offer high strength, flexibility, and moisture resistance.",
+    "applicationOverview": "Used in packaging food, electronics, garments, and furniture protection."
+  },
+  {
+    "id": "2",
+    "slug": "pvc-shrinkable-rolls",
+    "title": "PVC Shrinkable Rolls",
+    "image": "/images/pvc-shrink-rolls.jpg",
+    "shortDescription": "Clear shrink film ideal for tamper-evident packaging.",
+    "fullDescription": "PVC shrink rolls are used for securing and bundling products. When heat is applied, the film shrinks tightly over the product to ensure protection and visibility.",
+    "applicationOverview": "Perfect for wrapping boxes, bottles, electronics, and food items."
+  },
+  {
+    "id": "3",
+    "slug": "zip-lock-bags",
+    "title": "Zip Lock Bags",
+    "image": "/images/zip-lock-bags.jpg",
+    "shortDescription": "Reusable sealable bags with strong zip locks.",
+    "fullDescription": "Zip lock bags provide convenience and secure closure for storing items. They are moisture-proof, reusable, and ideal for short or long-term storage.",
+    "applicationOverview": "Used in pharmaceuticals, food packaging, hardware, and jewelry storage."
+  },
+  {
+    "id": "4",
+    "slug": "pp-bags-rolls",
+    "title": "PP Bags / Rolls",
+    "image": "/images/pp-bags.jpg",
+    "shortDescription": "Polypropylene bags available in rolls or cut sizes.",
+    "fullDescription": "PP bags are tear-resistant, lightweight, and commonly used for food packaging and retail. The rolls offer easy use in automated or manual packing.",
+    "applicationOverview": "Used in packaging textiles, grains, sugar, stationery, and more."
+  },
+  {
+    "id": "5",
+    "slug": "garbage-bags",
+    "title": "Garbage Bags",
+    "image": "/images/garbage-bags.jpg",
+    "shortDescription": "Heavy-duty bags for commercial and residential waste.",
+    "fullDescription": "Our garbage bags are leak-proof, stretchable, and manufactured from recycled materials. Available in various sizes for all types of bins.",
+    "applicationOverview": "Used in households, hospitals, offices, and industrial waste collection."
+  },
+  {
+    "id": "6",
+    "slug": "pe-shrink-film-sheet-rolls",
+    "title": "PE Shrink Film Sheet Rolls",
+    "image": "/images/pe-shrink-film.jpg",
+    "shortDescription": "Polyethylene shrink film sheets for secure packaging.",
+    "fullDescription": "PE shrink film rolls are designed for heat shrink applications that require high strength and clarity. These films are eco-friendly and recyclable.",
+    "applicationOverview": "Used for pallet wrapping, bundling bottles, and protecting boxed products."
+  },
+  {
+    "id": "7",
+    "slug": "pe-lamination-sheet-rolls",
+    "title": "PE Lamination Sheet Rolls",
+    "image": "/images/pe-lamination-sheet-rolls.jpg",
+    "shortDescription": "Polyethylene sheets for industrial lamination use.",
+    "fullDescription": "PE lamination rolls are used to laminate paper, boards, or other packaging substrates. They enhance product durability, water resistance, and gloss.",
+    "applicationOverview": "Used in food packaging, labels, flexible pouches, and carton coating."
+  },
+  {
+    "id": "8",
+    "slug": "hdpe-ldpe-rolls",
+    "title": "HDPE / LDPE Rolls",
+    "image": "/images/hdpe-rolls.jpg",
+    "shortDescription": "Polyethylene rolls for industrial sheeting and packaging.",
+    "fullDescription": "These rolls are ideal for use in packaging machines and as protective coverings. They are easy to handle and can be customized in various thicknesses.",
+    "applicationOverview": "Used for floor covering, agriculture, furniture wrapping, and pallet liners."
+  },
+  {
+    "id": "9",
+    "slug": "pof-pe-stretch-films",
+    "title": "POF / PE Stretch Films",
+    "image": "/images/pof-roll.jpg",
+    "shortDescription": "Stretchable films for secure wrapping and shipping.",
+    "fullDescription": "POF and PE stretch films offer elasticity and durability for load stability. Available in hand-wrap or machine-wrap formats.",
+    "applicationOverview": "Used for packaging pallets, cartons, bundles in logistics, retail, and industrial storage."
+  }
+]

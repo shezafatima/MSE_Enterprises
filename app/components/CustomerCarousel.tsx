@@ -19,7 +19,6 @@ export default function CustomerCarousel() {
     { image: "/images/nike_logo.png" },
     { image: "/images/adidas_logo.png" },
     { image: "/images/derbystar_logo.png" },
-    { image: "/images/zara_logo.png" },
     { image: "/images/pb_logo.png" },
     { image: "/images/ikea_logo.png" },
     { image: "/images/jako_logo.png" },
@@ -61,7 +60,7 @@ export default function CustomerCarousel() {
               {group.map((customer, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br to-orange-600 from-orange-400  border-orange-700 border-2 flex items-center justify-center w-full h-40 rounded-md"
+                  className="bg-gradient-to-br to-orange-500 from-orange-400  border-orange-700 border-2 flex items-center justify-center w-full h-40 rounded-md"
                 >
                   <Image
                     src={customer.image}

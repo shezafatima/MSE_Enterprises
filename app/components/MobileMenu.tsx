@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 
 import {
@@ -25,13 +25,13 @@ export default function MobileMenu() {
   const [productOpen, setProductOpen] = useState(false);
 
   const aboutItems = [
-    "Our Vision & Mission",
-    "Our Journey",
-    "Industries We Serve",
-    "Sustainability",
-    "Our Customers",
-    "Our Certifications and Associations",
-    "Client Feedback",
+    "Quality Policy",
+            "Industries We Serve",
+            "Our Vision & Mission",
+            "Our Certifications",
+            
+            "Client Feedback",
+            "Our Customers",
   ];
 
   const productItems = [
@@ -58,6 +58,7 @@ export default function MobileMenu() {
         className="bg-black border-orange-600 text-orange-600 px-6 py-6 rounded-none w-full max-w-full h-screen overflow-y-auto"
         showCloseButton={false}
       >
+        <DialogTitle className="sr-only">Mobile Navigation Menu</DialogTitle>
         <div className="flex justify-end">
           
           <button onClick={() => setOpen(false)} className="text-orange-600 ">
@@ -83,7 +84,7 @@ export default function MobileMenu() {
               {aboutItems.map((item) => (
                 <Link
                   key={item}
-                  href={`/about/${slugify(item)}`}
+                 href={`/about#${slugify(item)}`}
                   onClick={() => setOpen(false)}
                   className="hover:underline border-b border-orange-600 pb-1"
                 >
@@ -102,7 +103,7 @@ export default function MobileMenu() {
               {productItems.map((item) => (
                 <Link
                   key={item}
-                  href={`/products/${slugify(item)}`}
+                  href={`/products/${item.toLowerCase().replace(/\s+\/\s+|\s+/g, "-")}`}
                   onClick={() => setOpen(false)}
                   className="hover:underline border-b border-orange-600 pb-1"
                 >

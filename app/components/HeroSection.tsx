@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const images = [
-  "/images/hero1.png",
-  "/images/hero2.png",
   "/images/hero3.png",
+  "/images/hero2.png",
+  "/images/hero1.png",
 ];
 
 export default function HeroSection() {
@@ -47,7 +47,7 @@ export default function HeroSection() {
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="text-4xl md:text-6xl font-extrabold mb-4 outlined-text text-transparent bg-gradient-to-r from-orange-400 via-orange-600 to-orange-800 bg-clip-text "
 >
-  Welcome to MSE Enterprises
+ MSE PLASTIC INDUSTRIES (PVT)LTD
 </motion.h1>
 
 
@@ -82,7 +82,7 @@ export default function HeroSection() {
   <button className="w-34 ml-3 inline-flex items-center justify-center border-2 border-orange-600 py-1 px-3  text-white font-bold text-base mt-4 md:mt-0 
   transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-orange-600
   hover:text-black hover:bg-gradient-to-r hover:from-orange-600 hover:to-yellow-600">
-  <Link target="_blank" href="/products">
+  <Link target="_blank" href="/about">
     About Us
   </Link>
 </button>
