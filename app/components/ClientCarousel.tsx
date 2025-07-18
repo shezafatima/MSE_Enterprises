@@ -56,12 +56,12 @@ export default function ClientCarousel() {
               className="pl-4 md:pl-6 basis-full md:basis-1/2 lg:basis-1/3"
             >
               <div
-                className="bg-white/5 text-white border border-white/10 rounded-xl p-4 md:py-8 shadow-lg backdrop-blur-md text-center h-full"
+                className="bg-white/5 text-gray-600 border border-gray-700 rounded-xl p-4 md:py-8 shadow-lg backdrop-blur-md text-center h-full"
                 
               >
-                <UserRound className="mx-auto mb-4 w-10 h-10 text-orange-500" />
-                <p className="text-gray-200 italic mb-4">“{testimonial.feedback}”</p>
-                <h4 className="text-xl font-semibold text-orange-500">{testimonial.name}</h4>
+                <UserRound className="mx-auto mb-4 w-10 h-10 text-blue-600" />
+                <p className="text-gray-700 italic mb-4">“{testimonial.feedback}”</p>
+                <h4 className="text-xl font-semibold text-blue-600">{testimonial.name}</h4>
                 <p className="text-sm text-gray-400">{testimonial.company}</p>
               </div>
             </CarouselItem>

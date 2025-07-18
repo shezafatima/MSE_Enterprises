@@ -6,6 +6,14 @@ import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast"
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsappButton";
+import Script from 'next/script'
+
+
+<Script
+
+  src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"
+  strategy="beforeInteractive"
+/>
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className}  antialiased bg-black`}
+        className={`${poppins.className}  antialiased bg-white`}
       >
         <Navbar/>
         {children}

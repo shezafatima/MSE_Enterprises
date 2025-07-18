@@ -5,14 +5,14 @@ export default function Contact() {
   return (
     <>
       
-      <section className="bg-black px-6 md:px-12 lg:px-24 py-20">
+      <section className="bg-white px-6 md:px-12 lg:px-24 py-20">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-orange-600 font-semibold text-lg mb-4">
+          <h3 className="text-blue-400 font-semibold text-lg mb-4">
             M.S.E Plastic Industries – Your Trusted Polybag Manufacturer
           </h3>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-300 font-extralight">We&apos;re </span>
-            <span className="text-gray-200 ">
+            <span className="text-blue-500 font-extralight">We&apos;re </span>
+            <span className="text-blue-600 ">
               here to help.
             </span>
           </h2>
@@ -22,35 +22,37 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
            
-            <div className="bg-orange-500 text-black p-6 rounded-xl  shadow-xl ">
+            <div className="bg-blue-500 text-white p-6 rounded-xl  shadow-xl ">
               <h4 className="text-xl font-bold mb-2">Address</h4>
               <p className="text-sm mb-2">
 Drop by our office for a face-to-face conversation.
               </p>
-              <p className="text-black font-semibold">
+              <p className="text-white font-semibold">
                 Karachi Unit 1:4-A, 2/3, Commercial Area, Nazimabad # 4, Karachi Pakistan
               </p>
               
             </div>
 
             {/* Call Box */}
-            <div className="bg-orange-500 text-black p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <div className="bg-blue-500 text-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               <h4 className="text-xl font-bold mb-2">Call Us </h4>
               <p className="text-sm mb-2">
                 We are just a phone call away. Experience our personalized service:
               </p>
-              <p className="text-black font-semibold">
-                Mr. Hassan Butt:  +923303512225 <br />
-                Mr. Adnan Butt:  +923212424299
+              <p className="text-white font-semibold text-sm">
+                Mr. Hassan Butt (Director):  +923303512225 <br />
+                Mr. Adnan Butt (CEO):  +923212424299 <br />
+                {/* Mr. Haris Butt (Marketing): */}
               </p>
             </div>
 
             {/* Mail Box */}
-            <div className="bg-orange-500 text-black p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+            <div className="bg-blue-500 text-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
               <h4 className="text-xl font-bold mb-2">Mail Us</h4>
               <p className="text-sm mb-2">Prefer to communicate in writing?</p>
-              <div  className="text-black font-semibold hover:underline">
+              <div  className="text-white font-semibold hover:underline">
                 Hassanbutt@msepvtlimited.com
+                Harisbutt@msepvtlimited.com
               </div>
             </div>
           </div>
@@ -58,7 +60,7 @@ Drop by our office for a face-to-face conversation.
       </section>
 
       
-      <section className="relative bg-black py-20 px-6 md:px-12 lg:px-24 overflow-hidden">
+      <section className="relative bg-white py-20 px-6 md:px-12 lg:px-24 overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Map */}
           
@@ -72,17 +74,17 @@ Drop by our office for a face-to-face conversation.
               frameBorder={0}
               style={{ filter: "contrast(1.2) opacity(0.8)" }}
             />
-            <div className="absolute bottom-5 left-5 bg-white/20 backdrop-blur-md text-black p-6 rounded-xl w-[90%] md:w-[80%] shadow-md">
+            <div className="absolute bottom-5 left-5 bg-white/20 backdrop-blur-md text-gray-600 p-6 rounded-xl w-[90%] md:w-[80%] shadow-md">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <h3 className="text-sm font-bold">ADDRESS</h3>
-                  <p className="text-sm text-orange-500">
+                  <p className="text-sm text-blue-500">
                     Karachi Unit 1: 4-A, 2/3, Commercial Area, Nazimabad # 4, Karachi Pakistan
                   </p>
                 </div>
                 <div>
                   <h3 className="text-sm font-bold mt-2">PHONE</h3>
-                  <p className="text-sm text-orange-500">+92-330-3512225</p>
+                  <p className="text-sm text-blue-500">+92-330-3512225</p>
                 </div>
               </div>
             </div>

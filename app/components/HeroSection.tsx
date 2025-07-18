@@ -1,95 +1,93 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
-
-const images = [
-  "/images/hero3.png",
-  "/images/hero2.png",
-  "/images/hero1.png",
-];
+import { Player } from "@lottiefiles/react-lottie-player";
+import * as THREE from "three";
+// @ts-expect-error: vanta.globe has no TypeScript types
+import GLOBE from "vanta/dist/vanta.globe.min";
+import Button from "./Button";
 
 export default function HeroSection() {
-  const [current, setCurrent] = useState(0);
+  const vantaRef = useRef<HTMLDivElement>(null);
+  const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof GLOBE> | null>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    if (!vantaEffect && vantaRef.current) {
+      setVantaEffect(
+        GLOBE({
+          el: vantaRef.current,
+          THREE,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x87c5ed,
+          backgroundColor: 0xd4e5f0,
+        })
+      );
+    }
+
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
+
 
   return (
-    <section className="relative z-0 w-full h-screen overflow-hidden">
-      {/* Background Images */}
-      {images.map((img, index) => (
-        <motion.div
-          key={img}
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-          style={{
-            backgroundImage: `url(${img})`,
-            opacity: index === current ? 1 : 0,
-          }}
-          animate={{ opacity: index === current ? 1 : 0 }}
-          transition={{ duration: 1.2 }}
-        />
-      ))}
+    <section className="relative w-full min-h-screen overflow-hidden">
+      {/* Vanta Background */}
+      <div
+        ref={vantaRef}
+        className="absolute inset-0 w-full h-full scale-x-[-1] z-0"
+      />
 
-      {/* Dot Overlay */}
-      <div className="hero-overlay absolute inset-0 z-10" />
+      {/* Content */}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-y-10 md:gap-y-0 sm:mt-0 mt-6 ">
+        {/* Right Animation (First on mobile) */}
+      
 
-      {/* Hero Content */}
-      <div className="relative z-20 flex flex-col justify-center items-center h-full text-center text-white px-4">
-        <motion.h1
-  initial={{ opacity: 0, y: 40, scale: 0.95 }}
-  animate={{ opacity: 1, y: 0, scale: 1 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  className="text-4xl md:text-6xl font-extrabold mb-4 outlined-text text-transparent bg-gradient-to-r from-orange-400 via-orange-600 to-orange-800 bg-clip-text "
->
- MSE PLASTIC INDUSTRIES (PVT)LTD
-</motion.h1>
+        {/* Left Content (Second on mobile) */}
+        <div className="w-full md:w-1/2 text-center md:text-left space-y-4 ">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="md:text-5xl text-3xl font-extrabold text-transparent bg-gradient-to-r from-blue-600 via-sky-600 to-indigo-600 bg-clip-text"
+          >
+            MSE PLASTIC INDUSTRIES 
+          </motion.h1>
 
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-lg md:text-xl text-gray-700 max-w-xl mx-auto md:mx-0"
+          >
+            Manufacturer & Importer of Plastic Products.
+          </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-lg md:text-xl text-white max-w-2xl"
-        >
-          Manufacturer & Importer of Plastic Products.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-8"
-        >
-          <div className="flex flex-row  justify-center items-center relative">
-
-          <button className="w-34 mr-3 inline-flex items-center justify-center border-2 border-orange-600 py-1 px-3  text-white font-bold text-base mt-4 md:mt-0 
-  transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-orange-600
-  hover:text-black hover:bg-gradient-to-r hover:from-orange-600 hover:to-yellow-600">
-  <Link target="_blank" href="/products">
-    Our Products
-  </Link>
-</button>
-<span className="absolute bg-orange-600 md:mt-0 mt-4 text-white rounded-full p-3 text-sm text-center shadow-[0_0_10px_4px_grey] z-10">
-  OR
-</span>
-
-  <button className="w-34 ml-3 inline-flex items-center justify-center border-2 border-orange-600 py-1 px-3  text-white font-bold text-base mt-4 md:mt-0 
-  transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-orange-600
-  hover:text-black hover:bg-gradient-to-r hover:from-orange-600 hover:to-yellow-600">
-  <Link target="_blank" href="/about">
-    About Us
-  </Link>
-</button>
-
-
-          </div>
-        </motion.div>
+          {/* Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="mt-6 flex justify-center md:justify-start"
+          >
+            <Button />
+          </motion.div>
+        </div>
+          <div className="w-full md:w-1/2 flex justify-center items-center ">
+          <Player
+            autoplay
+            loop
+            src="/animations/hero.json"
+            className="w-[400px] h-[400px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px]"
+          />
+        </div>
       </div>
     </section>
   );

@@ -60,10 +60,11 @@ export default function CustomerCarousel() {
               {group.map((customer, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br to-orange-500 from-orange-400  border-orange-700 border-2 flex items-center justify-center w-full h-40 rounded-md"
+                  className="bg-gradient-to-br to-blue-400 from-blue-700  border-blue-700 border-2 flex items-center justify-center w-full h-40 rounded-md"
                 >
                   <Image
                     src={customer.image}
+                    loading="lazy"
                     alt={`Customer logo ${groupIndex * itemsPerSlide + index + 1}`}
                     width={100}
                     height={100}

@@ -20,44 +20,44 @@ export default function Footer() {
   <div className="md:w-2/3 w-full flex flex-wrap">
     {/* Quick Links */}
     <div className="w-full md:w-1/3 px-4 mb-10 md:mb-0 md:mt-7">
-      <h2 className="text-orange-600 font-medium tracking-widest text-[20px] ">Quick Links</h2>
-      <span className="block bg-orange-600 w-10 h-[3px] my-2"></span>
+      <h2 className="text-blue-600 font-medium tracking-widest text-[20px] ">Quick Links</h2>
+      <span className="block bg-blue-600 w-10 h-[3px] my-2"></span>
       <nav className="list-none">
-        <li><Link href="/products" className="text-gray-500 text-[14px] hover:text-orange-600">Products</Link></li>
-        <li><Link href="/about" className="text-gray-500 text-[14px] hover:text-orange-600">About Us</Link></li>
-        <li><Link href="/about#our-certifications" className="text-gray-500 text-[14px] hover:text-orange-600">Our Certifications</Link></li>
-        <li><Link href="/contact" className="text-gray-500 text-[14px] hover:text-orange-600">Contact Us</Link></li>
+        <li><Link href="/products" className="text-gray-500 text-[14px] hover:text-blue-600">Products</Link></li>
+        <li><Link href="/about" className="text-gray-500 text-[14px] hover:text-blue-600">About Us</Link></li>
+        <li><Link href="/about#our-certifications" className="text-gray-500 text-[14px] hover:text-blue-600">Our Certifications</Link></li>
+        <li><Link href="/contact" className="text-gray-500 text-[14px] hover:text-blue-600">Contact Us</Link></li>
       </nav>
     </div>
 
     {/* Our Products */}
     <div className="w-full md:w-1/3 px-4 mb-10 md:mb-0 md:mt-7">
-      <h2 className="text-orange-600 font-medium tracking-widest text-[20px] ">Our Products</h2>
-       <span className="block bg-orange-600 w-10 h-[3px] my-2"></span>
+      <h2 className="text-blue-600 font-medium tracking-widest text-[20px] ">Our Products</h2>
+       <span className="block bg-blue-600 w-10 h-[3px] my-2"></span>
       <nav className="list-none">
       
-       <li><Link href="/products/hdpe-ldpe-bags" className="text-gray-500 text-[14px] hover:text-orange-600">HDPE / LDPE Bags</Link></li>
-  <li><Link href="/products/pvs-shrinkable-rolls" className="text-gray-500 text-[14px] hover:text-orange-600">PVS Shrinkable Rolls</Link></li>
-  <li><Link href="/products/zip-lock-bags" className="text-gray-500 text-[14px] hover:text-orange-600">Zip Lock Bags</Link></li>
-  <li><Link href="/products/pp-bags-rolls" className="text-gray-500 text-[14px] hover:text-orange-600">PP Bags / Rolls</Link></li>
-  <li><Link href="/products/garbage-bags" className="text-gray-500 text-[14px] hover:text-orange-600">Garbage Bags</Link></li>
-  <li><Link href="/products/pe-shrink-film-sheet-rolls" className="text-gray-500 text-[14px] hover:text-orange-600">PE Shrink Film Sheet Rolls</Link></li>
-  <li><Link href="/products/pe-lamination-sheet-rolls" className="text-gray-500 text-[14px] hover:text-orange-600">PE Lamination Sheet Rolls</Link></li>
-  <li><Link href="/products/hdpe-ldpe-rolls" className="text-gray-500 text-[14px] hover:text-orange-600">HDPE / LDPE Rolls</Link></li>
-  <li><Link href="/products/pof-pe-stretch-films" className="text-gray-500 text-[14px] hover:text-orange-600">POF / PE Stretch Films</Link></li>
+       <li><Link href="/products/hdpe-ldpe-bags" className="text-gray-500 text-[14px] hover:text-blue-600">HDPE / LDPE Bags</Link></li>
+  <li><Link href="/products/pvs-shrinkable-rolls" className="text-gray-500 text-[14px] hover:text-blue-600">PVS Shrinkable Rolls</Link></li>
+  <li><Link href="/products/zip-lock-bags" className="text-gray-500 text-[14px] hover:text-blue-600">Zip Lock Bags</Link></li>
+  <li><Link href="/products/pp-bags-rolls" className="text-gray-500 text-[14px] hover:text-blue-600">PP Bags / Rolls</Link></li>
+  <li><Link href="/products/garbage-bags" className="text-gray-500 text-[14px] hover:text-blue-600">Garbage Bags</Link></li>
+  <li><Link href="/products/pe-shrink-film-sheet-rolls" className="text-gray-500 text-[14px] hover:text-blue-600">PE Shrink Film Sheet Rolls</Link></li>
+  <li><Link href="/products/pe-lamination-sheet-rolls" className="text-gray-500 text-[14px] hover:text-blue-600">PE Lamination Sheet Rolls</Link></li>
+  <li><Link href="/products/hdpe-ldpe-rolls" className="text-gray-500 text-[14px] hover:text-blue-600">HDPE / LDPE Rolls</Link></li>
+  <li><Link href="/products/pof-pe-stretch-films" className="text-gray-500 text-[14px] hover:text-blue-600">POF / PE Stretch Films</Link></li>
       </nav>
     </div>
 
     {/* Get in Touch */}
     <div className="w-full md:w-1/3 px-4 md:mt-7">
-      <h2 className="text-orange-600 font-medium tracking-widest text-[20px]">Get in Touch</h2>
-       <span className="block bg-orange-600 w-10 h-[3px] my-2"></span>
+      <h2 className="text-blue-600 font-medium tracking-widest text-[20px]">Get in Touch</h2>
+       <span className="block bg-blue-600 w-10 h-[3px] my-2"></span>
       <nav className="list-none">
         <div className="flex items-center gap-2 my-4">
-          <span className="bg-orange-600 p-2 rounded-sm inline-flex">
+          <span className="bg-blue-600 p-2 rounded-sm inline-flex">
             <Phone className=" text-white" />
           </span>
-          <ul><Link href="" className="text-white hover:text-orange-600 text-sm">Contact Us</Link>
+          <ul><Link href="" className="text-blue-700 hover:text-blue-600 text-sm">Contact Us</Link>
           <li className="text-[15px]">
             Mr Hassan Butt &#x2772;Director&#x2773;:
           </li>
@@ -70,22 +70,22 @@ export default function Footer() {
           </ul>
         </div>
         <div className="flex items-center gap-2 my-4">
-          <span className="bg-orange-600 p-2 rounded-sm inline-flex ">
+          <span className="bg-blue-600 p-2 rounded-sm inline-flex ">
             <MapPin className="text-lg text-white " />
           </span>
-          <ul><Link href="" className="text-white hover:text-orange-600 text-sm  ">Location</Link>
+          <ul><Link href="" className="text-blue-700 hover:text-blue-600 text-sm  ">Location</Link>
           <li className="text-sm">
             Karachi Unit 1:4-A, 2/3, Commercial Area, Nazimabad # 4, Karachi Pakistan
           </li>
           </ul>
         </div>
         <div className="flex items-center gap-2 my-4">
-          <span className="bg-orange-600 p-2 rounded-sm inline-flex">
+          <span className="bg-blue-600 p-2 rounded-sm inline-flex">
             <Mail className="text-lg text-white" />
           </span>
-          <ul><Link href="" className="text-white hover:text-orange-600 text-sm">Mail Us</Link>
+          <ul><Link href="" className="text-blue-700 hover:text-blue-600 text-sm">Mail Us</Link>
           <li className="text-sm">
-            mse_plasticindustries@gmail.com
+            Hassanbutt@msepvtlimited.com
           </li>
           </ul>
         </div>
@@ -93,13 +93,13 @@ export default function Footer() {
     </div>
   </div>
 </div>
-<hr className="w-full bg-orange-700 h-[2px]  border-none">
+<hr className="w-full bg-blue-700 h-[2px]  border-none">
 
 </hr>
-      <div className="bg-black">
+      <div className="">
         <div className=" mx-auto py-4  ">
           <p className="text-gray-500 text-sm text-center ">
-           Copy Right © {new Date().getFullYear()} M.S.E Plastic Industries
+           Copy Right © {new Date().getFullYear()} Hassanbutt@msepvtlimited.com
            
           </p>
          

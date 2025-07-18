@@ -18,6 +18,7 @@ export default function CertificateViewer() {
           <Image
           width={500}
             height={500}
+            loading="lazy"
             src={"/images/certificate.png"}
             alt="Certification"
             className="w-60 h-auto object-contain rounded-md"
@@ -31,7 +32,7 @@ export default function CertificateViewer() {
           <div className="relative max-w-4xl w-full px-6">
             {/* Close Button */}
             <button
-              className="absolute top-4 right-4 text-white hover:text-orange-500 transition"
+              className="absolute top-4 right-4 text-white hover:text-blue-500 transition"
               onClick={() => setIsOpen(false)}
             >
               <X size={30} />
@@ -40,6 +41,7 @@ export default function CertificateViewer() {
             <Image
             width={500}
               height={500}
+              loading="lazy"
               src={"/images/certificate.png"}
               alt="Zoomed Certificate"
               className="w-full max-h-[80vh] object-contain rounded-xl"

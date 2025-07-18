@@ -19,14 +19,15 @@ export default function IndustryCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className=" flex flex-col items-center  text-black  bg-white/10 p-6 rounded-xl shadow-md "
+      className=" flex flex-col items-center  text-white  bg-white/10 p-6 rounded-xl shadow-md "
     >
       <Image
         src={`/icons/${iconName}.svg`}
+        loading="lazy"
         alt={name}
         width={40}
         height={40}
-        className="mb-3  filter brightness-0  transition-all duration-300 "
+        className="mb-3  filter brightness-0  invert transition-all duration-300 "
       />
       <p className="font-medium text-center">{name}</p>
     </motion.div>

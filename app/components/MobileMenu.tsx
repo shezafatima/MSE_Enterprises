@@ -49,19 +49,19 @@ export default function MobileMenu() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <button className="text-3xl text-orange-600">
+        <button className="text-3xl text-blue-600">
           <Menu />
         </button>
       </DialogTrigger>
 
       <DialogContent
-        className="bg-black border-orange-600 text-orange-600 px-6 py-6 rounded-none w-full max-w-full h-screen overflow-y-auto"
+        className="bg-white border-blue-600 text-blue-600 px-6 py-6 rounded-none w-full max-w-full h-screen overflow-y-auto"
         showCloseButton={false}
       >
         <DialogTitle className="sr-only">Mobile Navigation Menu</DialogTitle>
         <div className="flex justify-end">
           
-          <button onClick={() => setOpen(false)} className="text-orange-600 ">
+          <button onClick={() => setOpen(false)} className="text-blue-600 ">
             <X className="w-6 h-6" />
           </button>
         </div>
@@ -70,23 +70,23 @@ export default function MobileMenu() {
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="border-b border-orange-600 pb-1"
+            className="border-b border-blue-600 pb-1"
           >
             Home
           </Link>
 
           {/* About Dropdown */}
           <Collapsible open={aboutOpen} onOpenChange={setAboutOpen}>
-            <CollapsibleTrigger className="flex justify-between w-full items-center border-b border-orange-600 pb-1">
+            <CollapsibleTrigger className="flex justify-between w-full items-center border-b border-blue-600 pb-1">
               About {aboutOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
             </CollapsibleTrigger>
-            <CollapsibleContent className="pl-4 flex p-2 flex-col gap-4 bg-gray-950 mt-3 rounded-2xl">
+            <CollapsibleContent className="pl-4 flex p-2 flex-col gap-4 bg-gray-200 mt-3 rounded-2xl">
               {aboutItems.map((item) => (
                 <Link
                   key={item}
                  href={`/about#${slugify(item)}`}
                   onClick={() => setOpen(false)}
-                  className="hover:underline border-b border-orange-600 pb-1"
+                  className="hover:underline border-b border-blue-600 pb-1"
                 >
                   {item}
                 </Link>
@@ -96,16 +96,16 @@ export default function MobileMenu() {
 
           {/* Products Dropdown */}
           <Collapsible open={productOpen} onOpenChange={setProductOpen}>
-            <CollapsibleTrigger className="flex justify-between w-full items-center mt-2 border-b border-orange-600 pb-1">
+            <CollapsibleTrigger className="flex justify-between w-full items-center mt-2 border-b border-blue-600 pb-1">
               Products {productOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
             </CollapsibleTrigger>
-            <CollapsibleContent className="pl-4 flex p-2 flex-col gap-4 bg-gray-950 mt-3 rounded-2xl">
+            <CollapsibleContent className="pl-4 flex p-2 flex-col gap-4 bg-gray-200 mt-3 rounded-2xl">
               {productItems.map((item) => (
                 <Link
                   key={item}
                   href={`/products/${item.toLowerCase().replace(/\s+\/\s+|\s+/g, "-")}`}
                   onClick={() => setOpen(false)}
-                  className="hover:underline border-b border-orange-600 pb-1"
+                  className="hover:underline border-b border-blue-600 pb-1"
                 >
                   {item}
                 </Link>
@@ -116,7 +116,7 @@ export default function MobileMenu() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="border-b border-orange-600 pb-1"
+            className="border-b border-blue-600 pb-1"
           >
             Contact Us
           </Link>
@@ -126,7 +126,7 @@ export default function MobileMenu() {
             href={"/mse_profile.pdf"}
             download
             onClick={() => setOpen(false)}
-            className="mt-4 border-2 border-orange-600 text-center py-2 rounded-full hover:bg-orange-600 hover:text-black font-bold"
+            className="mt-4 border-2 border-blue-600 text-center py-2 rounded-full hover:bg-blue-600 hover:text-black font-bold"
           >
             Company Profile
           </Link>

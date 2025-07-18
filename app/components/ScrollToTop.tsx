@@ -28,7 +28,7 @@ export default function ScrollToTop() {
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           onClick={scrollToTop}
-          className="fixed bottom-20 right-4 z-50 block p-3 bg-white/20 backdrop-blur-md text-white rounded-full shadow-xl hover:bg-white/30 transition-transform hover:scale-110 cursor-pointer"
+          className="fixed bottom-20 right-4 z-50 block p-3 bg-white/10 backdrop-blur-md text-blue-400 rounded-full shadow-xl hover:bg-white/30 transition-transform hover:scale-110 cursor-pointer"
         >
           <ArrowUp className="w-6 h-6 animate-pulse" />
         </motion.button>

@@ -26,6 +26,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
           <Image
             src={product.image}
             alt={product.title}
+            loading="lazy"
             width={500}
             height={300}
             className="w-full h-56 object-cover"
@@ -34,7 +35,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
             <h3 className="text-white text-xl font-semibold">{product.title}</h3>
             <p className="text-gray-300 text-sm mt-1">{product.shortDescription}</p>
             
-              <button className="text-black mt-4 self-start bg-orange-600 text-sm px-4 py-1.5 rounded-full font-medium border border-orange-600 hover:text-orange-600 hover:bg-black transition">
+              <button className="text-white mt-4 self-start bg-blue-600 text-sm px-4 py-1.5 rounded-full font-medium border border-blue-600 hover:text-blue-600 hover:bg-white transition">
                 View Details →
               </button>
           </div>

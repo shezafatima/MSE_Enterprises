@@ -28,10 +28,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
   if (!product) return notFound();
 
   return (
-    <section className="bg-black text-white py-20 px-6 md:px-12 lg:px-24">
+    <section className="bg-white text-white py-20 px-6 md:px-12 lg:px-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-start">
         <div>
-          <h1 className="text-4xl font-bold text-orange-600 mb-4">
+          <h1 className="text-4xl font-bold text-blue-600 mb-4">
             {product.title}
           </h1>
           <p className="text-gray-500 mb-6">{product.fullDescription}</p>
@@ -47,7 +47,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </div>
 
       <div>
-        <h2 className="text-2xl font-semibold mb-2 text-orange-600">
+        <h2 className="text-2xl font-semibold mb-2 text-blue-600">
           Application Overview
         </h2>
         <p className="text-gray-400">{product.applicationOverview}</p>

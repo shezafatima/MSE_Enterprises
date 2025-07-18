@@ -109,12 +109,12 @@ html {
   input:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: black !important;
-    background-color: #ee6a0c !important;
-    box-shadow: 0 0 0px 1000px #f97316 inset !important; /* optional: orange fill */
+    background-color: #068cda !important;
+    box-shadow: 0 0 0px 1000px #0797da inset !important; /* optional: orange fill */
   }
 
   input:-webkit-autofill:focus {
-    box-shadow: 0 0 0px 1000px #f97316 inset !important;
+    box-shadow: 0 0 0px 1000px #0c90e9 inset !important;
   }
 }
 
@@ -126,4 +126,58 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* === Floating and Spinning Animations === */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === Utility Classes === */
+.animate-float-slow {
+  animation: float 10s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 6s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float-fast 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 15s linear infinite;
 }
