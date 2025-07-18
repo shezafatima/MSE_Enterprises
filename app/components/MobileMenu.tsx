@@ -130,6 +130,10 @@ export default function MobileMenu() {
           >
             Company Profile
           </Link>
+           <Link  href={"/quote"}  onClick={() => setOpen(false)}
+            className="mt-4 border-2 bg-blue-600 text-white border-blue-600 text-center py-2 rounded-full hover:bg-white hover:text-blue-600 font-bold">
+    Request A Quote
+  </Link>
         </div>
       </DialogContent>
     </Dialog>

@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       
-      <section className="bg-white px-6 md:px-12 lg:px-24 py-20">
+      <section className="bg-white px-6 md:px-12 lg:px-24 md:py-20 md:mt-0 mt-8">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-blue-400 font-semibold text-lg mb-4">
             M.S.E Plastic Industries – Your Trusted Polybag Manufacturer

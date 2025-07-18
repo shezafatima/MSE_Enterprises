@@ -28,8 +28,8 @@ export default function QuoteSection() {
       <div className="flex flex-row justify-center items-center relative z-10">
         <button className="w-34 mr-3 border-2 border-white py-1 px-3 text-white font-bold text-base mt-4 md:mt-0 
           transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-white hover:text-blue-600 hover:bg-white">
-          <Link target="_blank" href="/products">
-            Our Products
+          <Link  href="/contact">
+            General Query
           </Link>
         </button>
 
@@ -39,8 +39,8 @@ export default function QuoteSection() {
 
         <button className="w-34 ml-3 border-2 border-white py-1 px-3 text-white font-bold text-base mt-4 md:mt-0 
           transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-white hover:text-blue-600 hover:bg-white">
-          <Link target="_blank" href="/about">
-            About Us
+          <Link  href="/quote">
+            Request a Quote
           </Link>
         </button>
       </div>
