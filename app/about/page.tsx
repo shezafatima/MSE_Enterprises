@@ -7,11 +7,12 @@ import VisionMissionSection from "../components/Mission";
 import Certifications from "../components/Certifications";
 import ClientFeedback from "../components/ClientFeedback";
 import QuoteSection from "../components/QuoteSection";
+import ScrollToHash from "../components/ScrollToHash";
 
 export default function About() {
   return (
     <div>
- 
+ <ScrollToHash/>
       <div className="container mx-auto flex px-5 pt-12 pb-12 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:font-medium text-4xl  drop-shadow-lg text-blue-600 ">

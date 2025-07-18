@@ -87,6 +87,9 @@ export default function Footer() {
           <li className="text-sm">
             Hassanbutt@msepvtlimited.com
           </li>
+           <li className="text-sm">
+            Harisbutt@msepvtlimited.com
+          </li>
           </ul>
         </div>
       </nav>

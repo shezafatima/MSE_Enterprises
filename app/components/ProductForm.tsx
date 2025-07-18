@@ -48,7 +48,7 @@ export default function ProductForm({ product }: { product: string }) {
   };
 
   return (
-    <div className="bg-blue-500 text-black p-8 rounded-3xl shadow-2xl md:mt-40">
+    <div className="bg-blue-500 text-black md:p-8 p-4 rounded-3xl shadow-2xl md:mt-40">
       <form
         className="grid grid-cols-1 md:grid-cols-2 gap-4"
         onSubmit={handleSubmit(onSubmit)}

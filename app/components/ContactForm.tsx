@@ -46,7 +46,7 @@ export default function ContactForm() {
   }
 }
   return (
-    <div className="bg-blue-500 text-white p-8 rounded-3xl shadow-2xl">
+    <div className="bg-blue-500 text-white md:p-8 p-4 rounded-3xl shadow-2xl">
       <h2 className="text-2xl font-bold mb-2">Get in Touch</h2>
       <p className="text-gray-600 mb-6">
         We&apos;d love to hear your thoughts or help with your inquiries.

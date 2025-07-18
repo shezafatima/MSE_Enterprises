@@ -49,7 +49,7 @@ export default function QualityPolicy() {
 
 function PolicyCard({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) {
   return (
-    <div className="bg-white/5  border-gray-400 border-2 p-6 rounded-2xl shadow-xl hover:shadow-blue-600/20 transition-all duration-300">
+    <div className="bg-white/5  border-gray-400 border-2 p-6 rounded-2xl shadow-xl shadow-blue-600/20 ">
       <div className="mb-4">{icon}</div>
       <h3 className="text-xl font-semibold mb-2 text-gray-800">{title}</h3>
       <p className="text-gray-800">{desc}</p>
