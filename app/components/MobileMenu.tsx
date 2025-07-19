@@ -121,15 +121,7 @@ export default function MobileMenu() {
             Contact Us
           </Link>
 
-          <Link
-            target="_blank"
-            href={"/mse_profile.pdf"}
-            download
-            onClick={() => setOpen(false)}
-            className="mt-4 border-2 border-blue-600 text-center py-2 rounded-full hover:bg-blue-600 hover:text-black font-bold"
-          >
-            Company Profile
-          </Link>
+         
            <Link  href={"/quote"}  onClick={() => setOpen(false)}
             className="mt-4 border-2 bg-blue-600 text-white border-blue-600 text-center py-2 rounded-full hover:bg-white hover:text-blue-600 font-bold">
     Request A Quote
