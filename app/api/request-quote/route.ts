@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     const jsonData = { ...plainData }
     delete jsonData.sample
 
-    const formspreeRes = await fetch("https://formspree.io/f/your_form_id", {
+    const formspreeRes = await fetch(process.env.FORMSPREE_ENDPOINT!, {
       method: "POST",
       headers: { Accept: "application/json", "Content-Type": "application/json" },
       body: JSON.stringify(jsonData)

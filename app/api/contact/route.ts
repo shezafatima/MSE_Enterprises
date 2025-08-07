@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     const formData = await req.json();
 
     // Send to Formspree
-    const formspreeRes = await fetch('https://formspree.io/f/your_form_id', {
+    const formspreeRes = await fetch(process.env.FORMSPREE_ENDPOINT!, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
