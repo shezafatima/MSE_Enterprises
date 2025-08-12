@@ -226,40 +226,170 @@
 //     </section>
 //   );
 // }
+// "use client";
+
+// import dynamic from "next/dynamic";
+// import HeroText from "./HeroText";
+// import React from "react";
+// import Script from "next/script";
+
+// export default function HeroSection() {
+//   const [showHeavy, setShowHeavy] = React.useState(false);
+
+//   React.useEffect(() => {
+//     if ("requestIdleCallback" in window) {
+//       requestIdleCallback(() => setShowHeavy(true), { timeout: 2500 });
+//     } else {
+//       setTimeout(() => setShowHeavy(true), 2500);
+//     }
+//   }, []);
+
+//   const HeroBackground = showHeavy
+//     ? dynamic(() => import("./HeroBackground"), { ssr: false })
+//     : null;
+
+//   const HeroAnimation = showHeavy
+//     ? dynamic(() => import("./HeroAnimation"), { ssr: false })
+//     : null;
+
+//   return (
+//     <section className="relative w-full min-h-screen overflow-hidden">
+//       {/* Preload text instantly for LCP */}
+//       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-y-10 md:gap-y-0">
+//         <HeroText />
+
+//         {/* Right Side - placeholder until heavy stuff loads */}
+//         {showHeavy && HeroAnimation ? (
+//           <HeroAnimation />
+//         ) : (
+//           <div
+//             className="w-full md:w-1/2 bg-gray-200 animate-pulse"
+//             style={{ minHeight: 350 }}
+//             aria-hidden="true"
+//           />
+//         )}
+//       </div>
+
+//       {/* Background loaded after idle */}
+//       {showHeavy && HeroBackground ? <HeroBackground /> : null}
+
+//       {/* Load heavy libraries in background */}
+//       {showHeavy && (
+//         <>
+//           <Script src="https://unpkg.com/three@0.158.0/build/three.min.js" strategy="lazyOnload" />
+//           <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" strategy="lazyOnload" />
+//         </>
+//       )}
+//     </section>
+//   );
+// }
+// "use client";
+
+// import dynamic from "next/dynamic";
+// import HeroText from "./HeroText";
+// import React from "react";
+// import Script from "next/script";
+
+// // Dynamically load heavy parts without blocking LCP
+// const HeroBackground = dynamic(() => import("./HeroBackground"), { ssr: false });
+// const HeroAnimation = dynamic(() => import("./HeroAnimation"), { ssr: false });
+
+// export default function HeroSection() {
+//   const [showHeavy, setShowHeavy] = React.useState(false);
+
+//   React.useEffect(() => {
+//     if ("requestIdleCallback" in window) {
+//       requestIdleCallback(() => setShowHeavy(true), { timeout: 2000 });
+//     } else {
+//       setTimeout(() => setShowHeavy(true), 2000);
+//     }
+//   }, []);
+
+//   return (
+//     <section className="relative w-full min-h-screen overflow-hidden">
+//       {/* Background loads after idle */}
+//       {showHeavy && <HeroBackground />}
+
+//       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-y-10 md:gap-y-0">
+//         {/* TEXT renders instantly for LCP */}
+//         <HeroText />
+
+//         {/* Fade-in effect for heavy animation */}
+//         <div
+//           className={`transition-opacity duration-700 ease-out ${
+//             showHeavy ? "opacity-100" : "opacity-0"
+//           }`}
+//         >
+//           {showHeavy ? (
+//             <HeroAnimation />
+//           ) : (
+//             <div
+//               className="w-full md:w-1/2 bg-gray-200 animate-pulse"
+//               style={{ minHeight: 350 }}
+//               aria-hidden="true"
+//             />
+//           )}
+//         </div>
+//       </div>
+
+//       {/* Preload heavy scripts after idle */}
+//       {showHeavy && (
+//         <>
+//           <Script
+//             src="https://unpkg.com/three@0.158.0/build/three.min.js"
+//             strategy="lazyOnload"
+//           />
+//           <Script
+//             src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+//             strategy="lazyOnload"
+//           />
+//         </>
+//       )}
+//     </section>
+//   );
+// }
 "use client";
 
 import dynamic from "next/dynamic";
 import HeroText from "./HeroText";
 import React from "react";
-import Script from "next/script";
+
+// Stage-loaded components
+const HeroBackground = dynamic(() => import("./HeroBackground"), { ssr: false });
+const HeroAnimation = dynamic(() => import("./HeroAnimation"), { ssr: false });
 
 export default function HeroSection() {
-  const [showHeavy, setShowHeavy] = React.useState(false);
+  const [showBackground, setShowBackground] = React.useState(false);
+  const [showAnimation, setShowAnimation] = React.useState(false);
 
   React.useEffect(() => {
+    // Stage 2: load background
     if ("requestIdleCallback" in window) {
-      requestIdleCallback(() => setShowHeavy(true), { timeout: 2500 });
+      requestIdleCallback(() => setShowBackground(true), { timeout: 2000 });
     } else {
-      setTimeout(() => setShowHeavy(true), 2500);
+      setTimeout(() => setShowBackground(true), 2000);
+    }
+
+    // Stage 3: load animation separately to avoid blocking
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(() => setShowAnimation(true), { timeout: 3500 });
+    } else {
+      setTimeout(() => setShowAnimation(true), 3500);
     }
   }, []);
 
-  const HeroBackground = showHeavy
-    ? dynamic(() => import("./HeroBackground"), { ssr: false })
-    : null;
-
-  const HeroAnimation = showHeavy
-    ? dynamic(() => import("./HeroAnimation"), { ssr: false })
-    : null;
-
   return (
     <section className="relative w-full min-h-screen overflow-hidden">
-      {/* Preload text instantly for LCP */}
+      {/* Stage 2 - background */}
+      {showBackground && <HeroBackground />}
+
+      {/* Foreground content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-y-10 md:gap-y-0">
+        {/* Stage 1 - text for LCP */}
         <HeroText />
 
-        {/* Right Side - placeholder until heavy stuff loads */}
-        {showHeavy && HeroAnimation ? (
+        {/* Stage 3 - animation */}
+        {showAnimation ? (
           <HeroAnimation />
         ) : (
           <div
@@ -269,17 +399,6 @@ export default function HeroSection() {
           />
         )}
       </div>
-
-      {/* Background loaded after idle */}
-      {showHeavy && HeroBackground ? <HeroBackground /> : null}
-
-      {/* Load heavy libraries in background */}
-      {showHeavy && (
-        <>
-          <Script src="https://unpkg.com/three@0.158.0/build/three.min.js" strategy="lazyOnload" />
-          <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" strategy="lazyOnload" />
-        </>
-      )}
     </section>
   );
 }
