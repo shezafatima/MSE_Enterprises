@@ -183,46 +183,103 @@
 //     </section>
 //   );
 // }
+// "use client";
+// import dynamic from "next/dynamic";
+// import HeroText from "./HeroText";
+// import React from "react";
+
+// // Load heavy components without blocking HeroText
+// const HeroBackground = dynamic(() => import("./HeroBackground"), { ssr: false });
+// const HeroAnimation = dynamic(() => import("./HeroAnimation"), { ssr: false });
+
+// export default function HeroSection() {
+//   const [showHeavy, setShowHeavy] = React.useState(false);
+
+//   React.useEffect(() => {
+//     // Wait until browser is idle, so text paints first
+//     if ("requestIdleCallback" in window) {
+//       requestIdleCallback(() => setShowHeavy(true), { timeout: 2000 });
+//     } else {
+//       setShowHeavy(true);
+//     }
+//   }, []);
+
+//   return (
+//     <section className="relative w-full min-h-screen overflow-hidden">
+//       {showHeavy && <HeroBackground />}
+      
+//       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-y-10 md:gap-y-0">
+//         {/* TEXT FIRST - will be LCP */}
+//         <HeroText />
+
+//         {/* Right Side - heavy content after idle */}
+//         {showHeavy ? (
+//           <HeroAnimation />
+//         ) : (
+//           <div
+//             className="w-full md:w-1/2"
+//             aria-hidden="true"
+//             style={{ minHeight: 350 }}
+//           />
+//         )}
+//       </div>
+//     </section>
+//   );
+// }
 "use client";
+
 import dynamic from "next/dynamic";
 import HeroText from "./HeroText";
 import React from "react";
-
-// Load heavy components without blocking HeroText
-const HeroBackground = dynamic(() => import("./HeroBackground"), { ssr: false });
-const HeroAnimation = dynamic(() => import("./HeroAnimation"), { ssr: false });
+import Script from "next/script";
 
 export default function HeroSection() {
   const [showHeavy, setShowHeavy] = React.useState(false);
 
   React.useEffect(() => {
-    // Wait until browser is idle, so text paints first
     if ("requestIdleCallback" in window) {
-      requestIdleCallback(() => setShowHeavy(true), { timeout: 2000 });
+      requestIdleCallback(() => setShowHeavy(true), { timeout: 2500 });
     } else {
-      setShowHeavy(true);
+      setTimeout(() => setShowHeavy(true), 2500);
     }
   }, []);
 
+  const HeroBackground = showHeavy
+    ? dynamic(() => import("./HeroBackground"), { ssr: false })
+    : null;
+
+  const HeroAnimation = showHeavy
+    ? dynamic(() => import("./HeroAnimation"), { ssr: false })
+    : null;
+
   return (
     <section className="relative w-full min-h-screen overflow-hidden">
-      {showHeavy && <HeroBackground />}
-      
+      {/* Preload text instantly for LCP */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-y-10 md:gap-y-0">
-        {/* TEXT FIRST - will be LCP */}
         <HeroText />
 
-        {/* Right Side - heavy content after idle */}
-        {showHeavy ? (
+        {/* Right Side - placeholder until heavy stuff loads */}
+        {showHeavy && HeroAnimation ? (
           <HeroAnimation />
         ) : (
           <div
-            className="w-full md:w-1/2"
-            aria-hidden="true"
+            className="w-full md:w-1/2 bg-gray-200 animate-pulse"
             style={{ minHeight: 350 }}
+            aria-hidden="true"
           />
         )}
       </div>
+
+      {/* Background loaded after idle */}
+      {showHeavy && HeroBackground ? <HeroBackground /> : null}
+
+      {/* Load heavy libraries in background */}
+      {showHeavy && (
+        <>
+          <Script src="https://unpkg.com/three@0.158.0/build/three.min.js" strategy="lazyOnload" />
+          <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" strategy="lazyOnload" />
+        </>
+      )}
     </section>
   );
 }
