@@ -85,10 +85,13 @@ export default function Footer() {
           </span>
           <ul><Link href="" className="text-blue-700 hover:text-blue-600 text-sm">Mail Us</Link>
           <li className="text-sm">
-            Hassanbutt@msepvtlimited.com
+     
+Hassanbutt@harispackages.com
+
           </li>
            <li className="text-sm">
-            Harisbutt@msepvtlimited.com
+
+Harisbutt@harispackages.com
           </li>
           </ul>
         </div>
@@ -102,7 +105,8 @@ export default function Footer() {
       <div className="">
         <div className=" mx-auto py-4  ">
           <p className="text-gray-500 text-sm text-center ">
-           Copy Right © {new Date().getFullYear()} Hassanbutt@msepvtlimited.com
+           Copy Right © {new Date().getFullYear()} Info@harispackages.com
+
            
           </p>
          

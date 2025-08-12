@@ -42,7 +42,7 @@ Drop by our office for a face-to-face conversation.
               <p className="text-white font-semibold text-sm">
                 Mr. Hassan Butt (Director):  +923303512225 <br />
                 Mr. Adnan Butt (CEO):  +923212424299 <br />
-                {/* Mr. Haris Butt (Marketing): */}
+                Mr. Haris Butt (Director Marketing)
               </p>
             </div>
 
@@ -51,8 +51,9 @@ Drop by our office for a face-to-face conversation.
               <h4 className="text-xl font-bold mb-2">Mail Us</h4>
               <p className="text-sm mb-2">Prefer to communicate in writing?</p>
               <div  className="text-white font-semibold hover:underline">
-                Hassanbutt@msepvtlimited.com
-                Harisbutt@msepvtlimited.com
+              Info@harispackages.com
+Hassanbutt@harispackages.com 
+Harisbutt@harispackages.com 
               </div>
             </div>
           </div>
