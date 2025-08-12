@@ -6,6 +6,7 @@ export default function Logo() {
     <Link href={"/"} className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 ">
       <Image
         src="/images/MSE_logo.png"
+        loading="lazy"
         alt="MSE Enterprises Logo"
         className="w-24 "
         width={400}

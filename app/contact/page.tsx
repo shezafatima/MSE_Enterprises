@@ -8,7 +8,7 @@ export default function Contact() {
       <section className="bg-white px-6 md:px-12 lg:px-24 md:py-20 md:mt-0 mt-8">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-blue-400 font-semibold text-lg mb-4">
-            M.S.E Plastic Industries – Your Trusted Polybag Manufacturer
+            Haris Packages – Your Trusted Polybag Manufacturer
           </h3>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-blue-500 font-extralight">We&apos;re </span>

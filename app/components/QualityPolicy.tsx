@@ -18,7 +18,7 @@ export default function QualityPolicy() {
         <p
           className="text-lg md:text-xl text-gray-500 md:text-[18px] text-[11px] mb-12 max-w-3xl mx-auto mt-4"
          >
-          At MSE, we are dedicated to delivering excellence through innovative packaging
+          At Haris Packages, we are dedicated to delivering excellence through innovative packaging
           solutions, skilled human resources, and environmental responsibility.
         </p>
 
