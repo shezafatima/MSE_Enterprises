@@ -10,11 +10,11 @@ import QuoteSection from "./components/QuoteSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MSE Plastic Industries | Quality Polybags Manufacturer",
+  title: "Haris Packages | Quality Polybags Manufacturer",
   description:
-    "MSE Plastic Industries offers high-quality polybags tailored for your packaging needs. Durable, customizable, and affordable.",
+    "Haris Packages offers high-quality polybags tailored for your packaging needs. Durable, customizable, and affordable.",
   keywords: [
-    "MSE Plastic Industries",
+    "Haris Packages",
     "polybags",
     "plastic bags",
     "packaging",

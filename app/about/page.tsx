@@ -20,9 +20,9 @@ export default function About() {
           </h1>
           <span className="bg-blue-600 w-10 h-[3px] my-2"></span>
           <p className="mb-2 leading-relaxed text-gray-500 md:text-[18px] text-[11px] mt-3">
-            We M.S.E Plastic Industry is one of the reputed names in the local market
+            We Haris Packages is one of the reputed names in the local market
             manufacturing of Polyethylene &. Polypropylene bags, Rolls, Sheets,
-            Printed bags, and other Plastic Packing Materials. M.S.E Plastic Industry
+            Printed bags, and other Plastic Packing Materials. Haris Packages
             was conventional in1965 having 40 years experience in the field of
             manufacturing of Polythene&. Packaging materials. Our company is
             well-known and has a reputed name in the plastic industry of

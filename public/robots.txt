@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.mseplasticindustries.com
+Host: https://www.harispackages.com
 
 # Sitemaps
-Sitemap: https://www.mseplasticindustries.com/sitemap.xml
+Sitemap: https://www.harispackages.com/sitemap.xml

@@ -11,7 +11,7 @@ export default function Logo() {
         width={400}
         height={400}
       />
-       <p className="text-[9px] text-blue-600 font-bold -ml-3 mt-3">PLASTIC INDUSTRIES</p>
+       <p className="text-[9px] text-blue-600 font-bold -ml-3 mt-3 capitalize">Haris Packages</p>
     </Link>
   );
 }

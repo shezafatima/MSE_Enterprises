@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://www.mseplasticindustries.com',
+  siteUrl: 'https://www.harispackages.com',
   generateRobotsTxt: true,
   generateIndexSitemap: true,
   sitemapSize: 5000,

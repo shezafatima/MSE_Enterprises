@@ -19,6 +19,7 @@ export default function WhatsAppButton() {
 
         <Image
           src="/images/whatsapp.png"
+          loading="lazy"
           alt="Chat on WhatsApp"
           width={400}
           height={400}

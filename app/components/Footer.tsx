@@ -10,7 +10,7 @@ export default function Footer() {
   <div className="md:w-1/3 w-full text-center md:text-left mb-10 md:mb-0">
     <Logo />
     <p className="mt-2 text-sm text-gray-500 md:w-5/6">
-      M.S.E Plastic Industry is one of the largest and most progressive
+      Haris Packages is one of the largest and most progressive
       organization in Polyethylene manufacturing of polythene bags its
       monthly production capacity of over 300 m/tons per month.
     </p>

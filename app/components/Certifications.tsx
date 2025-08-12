@@ -20,7 +20,7 @@ export default function Certifications() {
         {/* Text Block */}
         <div className="text-gray-500 md:text-lg text-sm leading-relaxed">
           <p className="mb-4">
-            At MSE, quality assurance is not just a promise — it&apos;s a verified standard.
+            At Haris Packages, quality assurance is not just a promise — it&apos;s a verified standard.
             Our certifications reflect our dedication to high-quality manufacturing,
             environmental responsibility, and consistent customer satisfaction.
           </p>

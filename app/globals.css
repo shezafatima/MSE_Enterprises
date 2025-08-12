@@ -5,7 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 @theme inline {
   --color-background: var(--background);
@@ -128,7 +128,7 @@ html {
   }
 }
 
-/* === Floating and Spinning Animations === */
+/* === Floating and Spinning Animations ===
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -166,7 +166,7 @@ html {
 }
 
 /* === Utility Classes === */
-.animate-float-slow {
+/* .animate-float-slow {
   animation: float 10s ease-in-out infinite;
 }
 
@@ -180,4 +180,18 @@ html {
 
 .animate-spin-slow {
   animation: spin-slow 15s linear infinite;
+} */ 
+/* @keyframes fade-slide {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+.animate-fade-slide {
+  animation: fade-slide 0.8s ease-out forwards;
+} */
