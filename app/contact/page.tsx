@@ -80,7 +80,7 @@ Harisbutt@harispackages.com
                 <div>
                   <h3 className="text-sm font-bold">ADDRESS</h3>
                   <p className="text-sm text-blue-500">
-                    Karachi Unit 1: 4-A, 2/3, Commercial Area, Nazimabad # 4, Karachi Pakistan
+                     4-C, 4/2, Commercial Area Nazimabad No 4, Karachi Centeral
                   </p>
                 </div>
                 <div>

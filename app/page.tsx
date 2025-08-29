@@ -22,20 +22,20 @@ export const metadata: Metadata = {
     "Karachi",
     "custom bags",
   ],
-  authors: [{ name: "MSE Plastic Industries" }],
+  authors: [{ name: "Haris Packages" }],
   robots: { index: true, follow: true },
   openGraph: {
-    title: "MSE Plastic Industries | Quality Polybags Manufacturer",
+    title: "Haris Packages | Quality Polybags Manufacturer",
     description:
       "We provide premium polybags and packaging solutions in Pakistan.",
     url: "https://www.mseplasticindustries.com",
-    siteName: "MSE Plastic Industries",
+    siteName: "Haris Packages",
     images: [
       {
-        url: "https://www.mseplasticindustries.com/og-image.jpg",
+        url: "https://www.harispackages.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MSE Plastic Industries Polybags",
+        alt: "Haris Packages Polybags",
       },
     ],
     locale: "en_PK",

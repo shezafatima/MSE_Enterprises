@@ -75,7 +75,7 @@ export default function Footer() {
           </span>
           <ul><Link href="" className="text-blue-700 hover:text-blue-600 text-sm  ">Location</Link>
           <li className="text-sm">
-            Karachi Unit 1:4-A, 2/3, Commercial Area, Nazimabad # 4, Karachi Pakistan
+           4-C, 4/2, Commercial Area Nazimabad No 4, Karachi Centeral
           </li>
           </ul>
         </div>
