@@ -15,10 +15,11 @@ export const metadata: Metadata = {
     "Haris Packages offers high-quality polybags tailored for your packaging needs. Durable, customizable, and affordable.",
   keywords: [
     "Haris Packages",
+    "polybags manufacturer",
     "polybags",
     "plastic bags",
     "packaging",
-    "manufacturer",
+    "plastic packaging",
     "Karachi",
     "custom bags",
   ],
