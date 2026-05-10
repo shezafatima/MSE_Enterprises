@@ -12,17 +12,13 @@ const ScrollToTop = dynamic(() => import("./ScrollToTop"), {
 });
 
 
-const ChatBot = dynamic(() => import("./ChatBot"), {
-  ssr: false,
-  loading: () => <div aria-hidden style={{ width: 64, height: 64 }} />,
-});
 
 export default function ClientOnlyWidgets() {
   return (
     <>
       <WhatsAppButton />
       <ScrollToTop />
-      <ChatBot /> 
+      
     </>
   );
 }
