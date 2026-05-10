@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     title: "Haris Packages | Quality Polybags Manufacturer",
     description:
       "We provide premium polybags and packaging solutions in Pakistan.",
-    url: "https://www.mseplasticindustries.com",
+    url: "https://haris-packages.netlify.app/",
     siteName: "Haris Packages",
     images: [
       {
-        url: "https://www.harispackages.com/og-image.jpg",
+        url: "https://haris-packages.netlify.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Haris Packages Polybags",
