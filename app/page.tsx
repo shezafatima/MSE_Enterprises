@@ -8,6 +8,7 @@ import ClientFeedback from "./components/ClientFeedback";
 import Banner from "./components/Banner";
 import QuoteSection from "./components/QuoteSection";
 import { Metadata } from "next";
+import Construction from "./components/Construction";
 
 export const metadata: Metadata = {
   title: "Haris Packages | Quality Polybags Manufacturer",
@@ -47,14 +48,15 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <Construction />
+      {/* <Hero />
       <About />
       <IndustriesSection />
       <HomeProduct />
       <Banner />
       <ClientFeedback />
       <QuoteSection />
-      <Customers />
+      <Customers /> */}
     </div>
   );
 }

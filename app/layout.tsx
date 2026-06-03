@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { Toaster } from "react-hot-toast"
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
+// import { Toaster } from "react-hot-toast"
 
-import ClientOnlyWidgets from "./components/ClientOnlyWidget";
+// import ClientOnlyWidgets from "./components/ClientOnlyWidget";
 
 
 
@@ -21,8 +21,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Haris Packages",
-   description:
-    "Discover high-quality HDPE, LDPE, PE Stretch Films, Zip Lock Bags, and other custom packaging solutions with Haris Packages. Trusted for innovation, durability, and timely delivery across industries.",
+  //  description:
+  //   "Discover high-quality HDPE, LDPE, PE Stretch Films, Zip Lock Bags, and other custom packaging solutions with Haris Packages. Trusted for innovation, durability, and timely delivery across industries.",
 };
 
 export default function RootLayout({
@@ -35,11 +35,11 @@ export default function RootLayout({
       <body
         className={`${poppins.className}  antialiased bg-white`}
       >
-        <Navbar/>
+        {/* <Navbar/> */}
         {children}
-        <Toaster position="top-right" reverseOrder={false}/>
+        {/* <Toaster position="top-right" reverseOrder={false}/>
         <Footer/>
-<ClientOnlyWidgets/>
+<ClientOnlyWidgets/> */}
       </body>
     </html>
   );
